@@ -1,0 +1,20 @@
+PATH
+  remote: .
+  specs:
+    tunnel (0.0.1)
+      highline (~> 1.6)
+      thor (= 0.14.3)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    highline (1.6.1)
+    thor (0.14.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  highline (~> 1.6)
+  thor (= 0.14.3)
+  tunnel!
