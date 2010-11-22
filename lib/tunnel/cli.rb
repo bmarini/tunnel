@@ -4,10 +4,12 @@ module Tunnel
   class CLI < Thor
 
     desc "start", "Start a tunnel"
+    method_option :verbose, :type => :boolean, :aliases => "-v", :banner => "Enable verbose output"
     def start
       highline = HighLine.new
       highline.choose do |menu|
         menu.choices(*configs) do |choice|
+          choice.verbose = options.verbose?
           Tunnel.start(choice)
         end
       end

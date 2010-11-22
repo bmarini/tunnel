@@ -13,8 +13,12 @@ module Tunnel
     end
 
     def ssh_command
-      "ssh -v -p %s -nNT -g -R *:%s:0.0.0.0:%s %s@%s" %
-      [ ssh_port, remote_port, local_port, remote_user, remote_host ]
+      "ssh %s -p %s -nNT -g -R *:%s:0.0.0.0:%s %s@%s" %
+      [ verbose_flag, ssh_port, remote_port, local_port, remote_user, remote_host ]
+    end
+
+    def verbose_flag
+      self.verbose ? '-v' : ''
     end
   end
 end
