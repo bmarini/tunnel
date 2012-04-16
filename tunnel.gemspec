@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.description = %q{A ruby cli wrapper to make ssh tunneling a no brainer}
 
   s.rubyforge_project = "tunnel"
-  s.add_dependency "thor", "0.14.3"
+  s.add_dependency "thor"
   s.add_dependency "highline", "~> 1.6"
 
   s.files         = `git ls-files`.split("\n")
